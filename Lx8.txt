@@ -1,0 +1,88 @@
+ （一）                    using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            LinkedList<float> kset = new LinkedList<float>();
+            kest.AddFirst(12.3f);
+            kest.AddFirst(42.5f);
+            kest.AddFirst(9f);
+            kest.AddFirst(kest.Find(12.3f), 8.6f);
+            var node1 = kest.Find(12.3f);
+            var node2 = node1.Next;
+            kest.Remove(node2);
+            kest.AddBefore
+                (node1, node1.Value);
+            foreach (float n in kset)
+                Console.WriteLine(n);
+        }
+    }
+}               
+
+
+
+
+
+
+（二）                        using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        class Dorder<T>: IComparer<T> where T:IComparable
+        {
+            public int Compare(T m, T n) =>
+                n.CompareTo(n);
+        }
+        static void Main(string[] args)
+        {
+            SortedSet<long> order1 =
+                new SortedSet<long> { 15, 8, 45, 6 };
+            foreach (long i in order1) Console.WriteLine(i);
+            SortedSet<string> order2 =
+                new SortedSet<string> { "jsp", "asp", "php" };
+            foreach (string i in order2) Console.WriteLine(i);
+            SortedSet<DateTime> order3 =
+                new SortedSet<DateTime>
+                { new DateTime(2012,5,6),new DateTime(2011,5,6),new DateTime(2013,5,6)};
+        }
+    }
+}
+
+
+
+
+
+（三）                    using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IEnumerable<decimal> Pass(List<decimal> scores)
+            {
+                foreach (decimal sc in scores)
+                {
+                    yield return 60;
+
+                }
+            }
+            List<decimal> scSet = new List<decimal> { 80.5m, 56m, 71m, 70.5m, 49m };
+            IEnumerable<decimal> passSet = Pass(scSet);
+            Console.WriteLine("以下成绩合格");
+            foreach(decimal n in passSet)
+            {
+                Console.WriteLine(n);
+            }
+        }
+    }
+                                                                                                        
